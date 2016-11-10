@@ -25,7 +25,6 @@ Then tell emacs to treat ctrl-c ctrl-w differently in your .emacs (or .emacs.d/c
 ```
           When you’re editing a python file, press ctrl-c ctrl-w and you get a good clickable error report that goes right to the offending line in your python code.
 
-http://photos.reinout.vanrees.org/photos/863660638_hdKbt-M.jpg
 The second way: flymake. Flymake checks your file’s syntax on the fly. Continuously. So you get feedback the moment you use a variable you didn’t define yet. The moment you make a typo. Chris McDonough has a config for pyflakes that I’m happily using:
 
 ```
