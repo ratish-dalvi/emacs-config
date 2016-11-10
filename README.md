@@ -4,7 +4,7 @@
 * pyflakes, flymake, flymake-cursor
 * web-mode
 
-It supports:
+## It supports:
 * pep8 checking (including 80 column limit)
 * on-the-fly error messages for python
 * web-mode editing
