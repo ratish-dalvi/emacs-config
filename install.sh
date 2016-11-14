@@ -1,11 +1,10 @@
 echo "Copying emacs and emacs.d files..."
 
-HOME_DIR=/home/ratish
-PATH_DIR=/home/ratish/wiseio/anaconda/bin/ # This could be any directory in path
+PATH_DIR=$HOME/wiseio/anaconda/bin/ # This could be any directory in path
 
 
-destination="$HOME_DIR/.emacs"
-cmd="cp emacs-config $HOME_DIR/.emacs"
+destination="$HOME/.emacs"
+cmd="cp emacs-config $HOME/.emacs"
 
 if [ -f $destination ];
 then
@@ -23,8 +22,8 @@ else
     eval $cmd
 fi
 
-destination="$HOME_DIR/.emacs.d"
-cmd="cp -r emacs.d $HOME_DIR/.emacs.d"
+destination="$HOME/.emacs.d"
+cmd="cp -r emacs.d $HOME/.emacs.d"
 
 if [ -d $destination ];
 then
