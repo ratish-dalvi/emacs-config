@@ -99,3 +99,13 @@
     (shell-command-on-region (mark) (point) "python -m json.tool" (buffer-name) t)
     )
   )
+
+;; markdown-mode
+(autoload 'markdown-mode "~/.emacs.d/markdown/markdown-mode.el"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+(autoload 'gfm-mode "~/.emacs.d/markdown/markdown-mode.el"
+   "Major mode for editing GitHub Flavored Markdown files" t)
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
