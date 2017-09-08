@@ -13,4 +13,5 @@
 * web-mode
 
 ## Installation
+* brew install markdown / apt-get install markdown
 * Run install.sh

@@ -1,6 +1,6 @@
 echo "Copying emacs and emacs.d files..."
 
-PATH_DIR=$HOME/wiseio/anaconda/bin/ # This could be any directory in path
+PATH_DIR=$HOME/anaconda2/bin/ # This could be any directory in path
 
 
 destination="$HOME/.emacs"
