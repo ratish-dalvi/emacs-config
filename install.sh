@@ -1,7 +1,6 @@
 echo "Copying emacs and emacs.d files..."
 
-PATH_DIR=$HOME/anaconda2/bin/ # This could be any directory in path
-
+read -p 'Enter your python installation path (eg. /home/ubuntu/miniconda/): ' PATH_DIR
 
 destination="$HOME/.emacs"
 cmd="cp emacs-config $HOME/.emacs"
@@ -43,9 +42,16 @@ else
 fi
 
 echo
-echo "Adding pychecker to path"
+echo "Adding pychecker to PATH"
 cp pychecker.sh $PATH_DIR/pychecker.sh 
 sudo chmod 744 $PATH_DIR/pychecker.sh 
 
+# Install dependencies
+echo "Installing pyflakes: "
+conda install pyflakes -y
+
+echo "Adding environment variable to bashrc"
+echo 'export PYTHON_PATH_FOR_EMACS='$PATH_DIR >> ~/.bashrc 
+
 echo
-echo "Installation done successfully"!
+echo "Installation finished successfully"!

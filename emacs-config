@@ -1,3 +1,9 @@
+;; Keep only for mac
+(global-set-key (kbd "ESC <up>") 'windmove-up)
+(global-set-key (kbd "ESC <down>") 'windmove-down)
+(global-set-key (kbd "ESC <right>") 'windmove-right)
+(global-set-key (kbd "ESC <left>") 'windmove-left)
+
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/web-mode"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/flymake"))
 (windmove-default-keybindings 'meta)
@@ -36,7 +42,7 @@
 
 ;; Script that flymake uses to check code. This script must be
 ;; present in the system path.
-(setq pycodechecker "/home/ratish/wiseio/anaconda/bin/pychecker.sh")
+(setq pycodechecker (concat (getenv "PYTHON_PATH_FOR_EMACS") "/pychecker.sh"))
 
 (when (load "flymake" t)
   (defun flymake-pycodecheck-init ()
@@ -78,7 +84,7 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(js-auto-indent-flag nil)
- '(python-check-command "/home/ubuntu/wiseio/anaconda/bin/pyflakes"))
+ '(python-check-command (concat (getenv "PYTHON_PATH_FOR_EMACS") "/pyflakes")))
 
 
 (setq default-tab-width 4)
